@@ -10,7 +10,7 @@ const initialSchedule: ScheduleItem = {
   id: "",
   teacherId: "",
   startDate: "",
-  day: ""
+  day: "",
   session: {
     start: {
       value: "",
