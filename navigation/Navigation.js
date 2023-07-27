@@ -4,10 +4,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "../src/screens/Home/Index";
 import { StyleSheet, View } from "react-native";
 import Login from "../src/screens/Login/Index";
-import Signup from "../src/screens/Signup/Index";
 import fonts from "../src/utils/fonts";
 import { Colors } from "../src/utils/Colors";
-import Splash from "../src/screens/Splash/Index";
 import Home2 from "../src/screens/Home2/Index";
 
 
@@ -31,15 +29,6 @@ const RootNavigator = ({ navigation }) => {
           headerShown: false,
         }}
       />
-    
-      <Stack.Screen
-        name="Splash"
-        component={Splash}
-        options={{
-          headerShown: false,
-        }}
-      />
-
       <Stack.Screen
         name="Login"
         component={Login}
@@ -48,14 +37,6 @@ const RootNavigator = ({ navigation }) => {
         }}
       />
     
-      <Stack.Screen
-        name="Signup"
-        component={Signup}
-        options={{
-          headerShown: false,
-        }}
-      />
-  
     </Stack.Navigator>
   );
 };

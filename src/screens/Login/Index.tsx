@@ -7,15 +7,8 @@ import { validateLogin } from "../../utils/Helper";
 import InputField from "../../components/InputField";
 import { renderStatusBar } from "../../utils/UIUtils";
 import { String } from "../../utils/String";
+import { LoginProps, ErrorState } from '../../utils/Types'
 
-interface LoginProps {
-  navigation: any;
-}
-
-interface ErrorState {
-  email?: string;
-  password?: string;
-}
 
 const Login: React.FC<LoginProps> = ({ navigation }) => {
   const [email, setEmail] = useState<string>('');
@@ -79,10 +72,13 @@ const Login: React.FC<LoginProps> = ({ navigation }) => {
 
         <View style={styles.signupLabel}>
           <Text onPress={() => navigation.navigate("Signup")} style={styles.signupText}>
-            Don't have an account?{<TouchableOpacity>
-              <Text style={styles.signupLinkText}> Sign up</Text>
-            </TouchableOpacity>}
+            Don't have an account?
           </Text>
+          <View>
+            <TouchableOpacity>
+              <Text style={styles.signupLinkText}> Sign up</Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </KeyboardAvoidingView>
     );

@@ -10,7 +10,6 @@ export const styles = StyleSheet.create({
     contentContainer:{
         flex:1,
         marginHorizontal: 20,
-
     },
     welcomeText: {
         marginTop: 100,
@@ -43,11 +42,14 @@ export const styles = StyleSheet.create({
     },
     signupLinkText: {
         color: Colors.primaryBlue,
-        // alignItems:"center",
+        alignItems:"center",
         fontSize: 13,
-
     },
-
+    signupLabel:{ 
+        // alignItems: "center",
+    justifyContent:"center",
+    marginTop: 80,
+    flexDirection:"row" },
     imageContainerBottom: {
         flex: 1,
         zIndex: -1,
@@ -64,6 +66,4 @@ export const styles = StyleSheet.create({
         color: 'red',
         marginBottom: 10,
       },
-      signupLabel:{ alignItems: "center",  marginTop: 80 }
-
 });
