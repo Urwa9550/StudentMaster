@@ -7,21 +7,21 @@ export const styles = StyleSheet.create({
         backgroundColor: Colors.white,
         flex: 1,
     },
-    contentContainer:{
-        flex:1,
+    content_container: {
+        flex: 1,
         marginHorizontal: 20,
     },
-    welcomeText: {
+    welcome_text: {
         marginTop: 100,
         textAlign: "center",
         color: Colors.primaryBlue,
         fontSize: 32,
         fontFamily: fonts.PoppinsMedium,
     },
-    textinputContainer: {
+    text_input_container: {
         marginTop: 30,
     },
-    forgotPasswordText: {
+    forgot_password_text: {
         color: Colors.primaryBlue,
         textAlign: "right",
         paddingHorizontal: 20,
@@ -29,41 +29,42 @@ export const styles = StyleSheet.create({
         fontFamily: fonts.PoppinsRegular,
         marginTop: 20,
     },
-    buttonContainer: {
-        width:'100%',
+    button_container: {
+        width: '100%',
         // flex:0.2,
         // alignSelf: "center",
         marginTop: 30,
     },
-    signupText: {
+    signup_text: {
         fontSize: 13,
         textAlign: "center",
         fontFamily: fonts.PoppinsRegular,
     },
-    signupLinkText: {
+    signup_link_text: {
         color: Colors.primaryBlue,
-        alignItems:"center",
+        alignItems: "center",
         fontSize: 13,
     },
-    signupLabel:{ 
+    signup_label: {
         // alignItems: "center",
-    justifyContent:"center",
-    marginTop: 80,
-    flexDirection:"row" },
-    imageContainerBottom: {
+        justifyContent: "center",
+        marginTop: 80,
+        flexDirection: "row"
+    },
+    image_container_bottom: {
         flex: 1,
         zIndex: -1,
-        paddingBottom:220,
+        paddingBottom: 220,
         justifyContent: "flex-end",
     },
-    imageBottom: {
+    image_bottom: {
         width: "100%",
         resizeMode: "contain",
         position: "absolute",
         top: 95,
     },
-    errorText: {
+    error_text: {
         color: 'red',
         marginBottom: 10,
-      },
+    },
 });

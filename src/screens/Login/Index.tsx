@@ -34,18 +34,17 @@ const Login: React.FC<LoginProps> = ({ navigation }) => {
   const renderContent = () => {
     return (
       <KeyboardAvoidingView
-        style={styles.contentContainer}
+        style={styles.content_container}
       >
-        {/* <Auth_Header navigation={navigation} title={"Log in"} /> */}
-        <Text style={styles.welcomeText}>Welcome Back</Text>
+        <Text style={styles.welcome_text}>Welcome Back</Text>
 
-        <View style={styles.textinputContainer}>
+        <View style={styles.text_input_container}>
           <InputField
             title="Email"
             placeholder="someone@mail.com"
             onChangeText={(val) => { setEmail(val) }}
           />
-          {errorMessage?.email && <Text style={styles.errorText}>{errorMessage.email}</Text>}
+          {errorMessage?.email && <Text style={styles.error_text}>{errorMessage.email}</Text>}
 
           <InputField
             title="Password"
@@ -55,13 +54,13 @@ const Login: React.FC<LoginProps> = ({ navigation }) => {
             secureTextEntry={true}
             onChangeText={(val) => { setPassword(val) }}
           />
-          {errorMessage?.password && <Text style={styles.errorText}>{errorMessage.password}</Text>}
+          {errorMessage?.password && <Text style={styles.error_text}>{errorMessage.password}</Text>}
           <View>
-            <Text style={styles.forgotPasswordText}>Forgot Password?</Text>
+            <Text style={styles.forgot_password_text}>Forgot Password?</Text>
           </View>
         </View>
 
-        <View style={styles.buttonContainer}>
+        <View style={styles.button_container}>
           <PrimaryButton
             title="Sign in"
             disable={email === "" || password === ""}
@@ -70,13 +69,13 @@ const Login: React.FC<LoginProps> = ({ navigation }) => {
           />
         </View>
 
-        <View style={styles.signupLabel}>
-          <Text onPress={() => navigation.navigate("Signup")} style={styles.signupText}>
+        <View style={styles.signup_label}>
+          <Text onPress={() => navigation.navigate("Signup")} style={styles.signup_text}>
             Don't have an account?
           </Text>
           <View>
             <TouchableOpacity>
-              <Text style={styles.signupLinkText}> Sign up</Text>
+              <Text style={styles.signup_link_text}> Sign up</Text>
             </TouchableOpacity>
           </View>
         </View>

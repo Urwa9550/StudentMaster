@@ -82,7 +82,7 @@ const Home2: React.FC<{ navigation: any }> = ({ navigation }) => {
   const renderItem = ({ item }) => {
     const sessionTime = `${item.session.start.value} ${item.session.start.meridian} - ${item.session.end.value} ${item.session.end.meridian}`;
     return (
-      <View style={styles.scheduleItem}>
+      <View style={styles.schedule_item}>
         <Text style={styles.date}>{item.day}</Text>
         <Text style={styles.time}>{sessionTime}</Text>
         <Button title="Edit" onPress={() => handleEditSchedule(item)} />
@@ -101,14 +101,14 @@ const Home2: React.FC<{ navigation: any }> = ({ navigation }) => {
             data={scheduleData}
             renderItem={renderItem}
             keyExtractor={(item) => item.id}
-            contentContainerStyle={styles.scheduleContainer}
+            contentContainerStyle={styles.schedule_container}
           />
-          <TouchableOpacity style={styles.addButton} onPress={handleAddSchedule}>
-            <Text style={styles.addButtonText}>Add Schedule</Text>
+          <TouchableOpacity style={styles.add_button} onPress={handleAddSchedule}>
+            <Text style={styles.add_button_text}>Add Schedule</Text>
           </TouchableOpacity>
 
           <Modal visible={modalVisible} animationType="slide">
-            <View style={styles.modalContainer}>
+            <View style={styles.modal_container}>
 
               <Picker
                 selectedValue={currentSchedule.day}
@@ -187,8 +187,8 @@ const Home2: React.FC<{ navigation: any }> = ({ navigation }) => {
 
   const renderHeader = () => {
     return (
-      <View style={styles.containerView}>
-        <View style={styles.containerView2}>
+      <View style={styles.container_view}>
+        <View style={styles.container_view_2}>
           <View>
             <Text style={styles.heading}>Hi, Professor Alan Turing</Text>
             <Text style={styles.description}>
@@ -210,7 +210,7 @@ const Home2: React.FC<{ navigation: any }> = ({ navigation }) => {
   }
 
   return (
-    <View style={styles.mainContainer}>
+    <View style={styles.main_container}>
       {renderHeader()}
       {renderContent()}
 
